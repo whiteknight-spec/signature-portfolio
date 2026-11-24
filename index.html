@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keerthivasan R — Software Developer & AI Systems Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toastNotification">
+    <span class="toast-icon">✅</span>
+    <span class="toast-message" id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+  <!-- Main Bento Master Chassis (Outer Bezel) -->
+  <main class="bento-chassis" id="bentoChassis">
+    <div class="bento-container" id="bentoContainer">
+
+      <!-- 1. BIO & INTRO CARD -->
+      <section class="bento-card card-intro" data-spotlight>
+        <div class="intro-header">
+          <div class="brand-monogram">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="10" fill="var(--mono-bg)"/>
+              <path d="M10 10L16 26L22 10M16 20H26" stroke="var(--mono-stroke)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="live-clock-badge">
+            <span class="live-day" id="liveDay">TUESDAY</span>
+            <span class="live-time" id="liveTime">21:45:00</span>
+          </div>
+        </div>
+
+        <div class="intro-content">
+          <h1 class="intro-greeting">HELLO: I'M KEERTHIVASAN <span>👋</span></h1>
+          <h2 class="intro-headline">SOFTWARE DEVELOPER + AI AUTOMATION ENGINEER <span class="sparkle">✨</span> PROBABLY.</h2>
+          <p class="intro-subtext">B.E. EEE graduate building high-impact computer-vision pipelines, Flutter applications, and autonomous agents.</p>
+        </div>
+
+        <div class="intro-socials">
+          <a href="https://github.com/whiteknight-spec" target="_blank" rel="noopener" class="social-link" title="GitHub / whiteknight-spec">GITHUB</a>
+          <a href="https://linkedin.com/in/keerthivasan-r" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">LINKEDIN</a>
+          <a href="mailto:keerthivasan6383007833@gmail.com" class="social-link copy-email-trigger" title="Click to copy email">EMAIL</a>
+          <a href="https://wa.me/916383007833" target="_blank" rel="noopener" class="social-link" title="WhatsApp Direct">WHATSAPP</a>
+        </div>
+      </section>
+
+      <!-- 2. PORTRAIT HERO CARD -->
+      <section class="bento-card card-portrait" data-spotlight>
+        <div class="portrait-wrapper">
+          <img src="assets/portrait.png" alt="Keerthivasan R" class="portrait-img" id="portraitImg" onerror="this.src='assets/portrait_alt.png'">
+          <div class="portrait-overlay"></div>
+          <div class="portrait-tag">
+            <div class="portrait-author-meta">
+              <span class="author-name">KEERTHIVASAN R</span>
+              <span class="author-role">TAMIL NADU, INDIA</span>
+            </div>
+            <span class="mono-label">FULL-STACK & AI</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. QUICK ACTIONS & STATUS STACK -->
+      <section class="bento-card-stack">
+        <!-- 3a: Status -->
+        <div class="bento-card card-status" data-spotlight>
+          <div class="status-top">
+            <span class="card-eyebrow">Status</span>
+            <button class="icon-btn-round" aria-label="Available Info" id="statusInfoBtn" title="View Availability">+</button>
+          </div>
+          <div class="status-indicator">
+            <span class="radar-dot"></span>
+            <span class="status-text">AVAILABLE FOR ROLES</span>
+          </div>
+        </div>
+
+        <!-- 3b: Theme Toggle -->
+        <div class="bento-card card-theme-toggle" id="themeToggleCard" data-spotlight role="button" tabindex="0" title="Click to toggle theme">
+          <div class="theme-content">
+            <span class="theme-icon" id="themeIcon">🌙</span>
+            <span class="theme-label" id="themeLabel">SWITCH TO LIGHT MODE.</span>
+          </div>
+        </div>
+
+        <!-- 3c: Works Trigger -->
+        <div class="bento-card card-action-btn" id="worksTriggerCard" data-spotlight role="button" tabindex="0">
+          <div class="action-btn-header">
+            <span class="card-eyebrow">Works</span>
+            <span class="arrow-glyph">↗</span>
+          </div>
+          <h3 class="action-btn-title">VIEW MY WORK</h3>
+        </div>
+
+        <!-- 3d: Resume Download Card -->
+        <a href="assets/Keerthivasan_Resume.pdf" download="Keerthivasan_Resume.pdf" class="bento-card card-action-btn card-resume-btn" data-spotlight title="Download Resume PDF">
+          <div class="action-btn-header">
+            <span class="card-eyebrow">Resume / CV</span>
+            <span class="arrow-glyph">↓</span>
+          </div>
+          <h3 class="action-btn-title">DOWNLOAD RESUME</h3>
+        </a>
+      </section>
+
+      <!-- 4. SAY HELLO / CTA CARD -->
+      <section class="bento-card card-cta" id="sayHelloCard" data-spotlight role="button" tabindex="0">
+        <div class="cta-top">
+          <span class="card-eyebrow">Say Hello 🤝</span>
+          <span class="arrow-glyph">↗</span>
+        </div>
+        <h3 class="cta-title">LET'S BUILD TOGETHER</h3>
+        <p class="cta-subtitle">Tap to send a direct message or discuss a software role.</p>
+      </section>
+
+      <!-- 5. FEATURED PROJECTS CARD -->
+      <section class="bento-card card-projects" data-spotlight>
+        <div class="card-header-flex">
+          <div>
+            <span class="card-eyebrow">Featured Work</span>
+            <h3 class="card-main-title">RECENT BUILDS & RESEARCH</h3>
+          </div>
+          <button class="arrow-glyph-btn" id="allProjectsBtn" title="View all projects">↗</button>
+        </div>
+
+        <div class="projects-preview-grid">
+          <!-- Project 1: TerraScope AI -->
+          <div class="project-mini-card" onclick="openProjectModal('terrascope')">
+            <div class="proj-badge">AI / COMPUTER VISION</div>
+            <h4>TerraScope AI</h4>
+            <p>Scientific mineral & rock exploration platform powered by PyTorch vision models.</p>
+            <div class="proj-tech-row">
+              <span>Python</span>
+              <span>FastAI</span>
+              <span>Docker</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Flowbox Automation -->
+          <div class="project-mini-card" onclick="openProjectModal('flowbox')">
+            <div class="proj-badge">FULL-STACK PLATFORM</div>
+            <h4>Flowbox Engine</h4>
+            <p>Self-hosted visual workflow orchestrator with OAuth & trigger pipelines.</p>
+            <div class="proj-tech-row">
+              <span>Node.js</span>
+              <span>React</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+
+          <!-- Project 3: ExamArena CBT -->
+          <div class="project-mini-card" onclick="openProjectModal('examarena')">
+            <div class="proj-badge">FLUTTER / MOBILE</div>
+            <h4>ExamArena CBT</h4>
+            <p>Cross-platform high-stakes computer-based testing client with APK distribution.</p>
+            <div class="proj-tech-row">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>APK Built</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. EXPERIENCE / IMPACT CARD -->
+      <section class="bento-card card-experience" data-spotlight>
+        <div class="card-header-flex">
+          <span class="card-eyebrow">Impact & Metrics</span>
+          <span class="arrow-glyph" onclick="openModal('aboutModal')">↗</span>
+        </div>
+        <h3 class="experience-headline">5+ PRODUCTION SYSTEMS DELIVERED</h3>
+        <p class="experience-desc">Specialized in autonomous AI agents, Telegram integrations, and full-stack enterprise automation.</p>
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Reliability</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">1A.14</span>
+            <span class="metric-lbl">AI Milestones</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">&lt;50ms</span>
+            <span class="metric-lbl">Latency Flow</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. TOOLS I USE CARD -->
+      <section class="bento-card card-tools" data-spotlight>
+        <div class="card-header-flex">
+          <span class="card-eyebrow">Tools I Use</span>
+          <span class="card-badge-mono">DAILY STACK</span>
+        </div>
+        <h3 class="tools-headline">MY DAILY TECH STACK</h3>
+
+        <div class="tools-icon-grid">
+          <div class="tool-chip" title="Python 3 — Automation & AI">
+            <span class="tool-icon">🐍</span>
+            <span class="tool-name">Python</span>
+          </div>
+          <div class="tool-chip" title="Flutter & Dart — Cross-Platform Mobile">
+            <span class="tool-icon">💙</span>
+            <span class="tool-name">Flutter</span>
+          </div>
+          <div class="tool-chip" title="React & TypeScript — Modern Frontends">
+            <span class="tool-icon">⚛️</span>
+            <span class="tool-name">React</span>
+          </div>
+          <div class="tool-chip" title="PyTorch & FastAI — Deep Learning Models">
+            <span class="tool-icon">🔥</span>
+            <span class="tool-name">PyTorch</span>
+          </div>
+          <div class="tool-chip" title="Node.js & Express — REST APIs & Engines">
+            <span class="tool-icon">🟢</span>
+            <span class="tool-name">Node.js</span>
+          </div>
+          <div class="tool-chip" title="Docker Containerization — Scalable Deployments">
+            <span class="tool-icon">🐳</span>
+            <span class="tool-name">Docker</span>
+          </div>
+          <div class="tool-chip" title="Tailwind CSS — Responsive Utility Design">
+            <span class="tool-icon">🌊</span>
+            <span class="tool-name">Tailwind</span>
+          </div>
+          <div class="tool-chip" title="Git & GitHub — Version Control & CI/CD">
+            <span class="tool-icon">🐙</span>
+            <span class="tool-name">Git</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- MODAL: CONTACT / SAY HELLO -->
+  <div class="modal-backdrop" id="contactModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3>LET'S WORK TOGETHER</h3>
+        <button class="modal-close" onclick="closeModal('contactModal')">&times;</button>
+      </div>
+      <p class="modal-subtitle">Have an exciting software engineering role, automation challenge, or collaboration? Send a direct message!</p>
+      
+      <form class="modal-form" id="contactForm">
+        <div class="form-field">
+          <label for="contactName">NAME</label>
+          <input type="text" id="contactName" required placeholder="Your Name or Company">
+        </div>
+        <div class="form-field">
+          <label for="contactEmail">EMAIL</label>
+          <input type="email" id="contactEmail" required placeholder="name@domain.com">
+        </div>
+        <div class="form-field">
+          <label for="contactMessage">PROJECT BRIEF / MESSAGE</label>
+          <textarea id="contactMessage" rows="4" required placeholder="Tell me about your product vision, engineering role, or question..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-submit">SEND MESSAGE 🚀</button>
+          <button type="button" class="btn-copy-email" id="copyEmailBtn">COPY EMAIL 📋</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ABOUT ME / STORY -->
+  <div class="modal-backdrop" id="aboutModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3>ENGINEERING PHILOSOPHY</h3>
+        <button class="modal-close" onclick="closeModal('aboutModal')">&times;</button>
+      </div>
+      <div class="modal-body-scroll">
+        <p>I am <strong>Keerthivasan R</strong>, an Electrical & Electronics Engineering graduate (B.E. EEE) specialized in Full-Stack Software Development and AI Automation.</p>
+        <p>I combine core electrical engineering problem-solving rigour with modern software craftsmanship: developing computer vision classification engines, high-security computer-based testing suites, and human-in-the-loop autonomous job application workflows.</p>
+        
+        <div class="about-stats-grid">
+          <div class="stat-box">
+            <h4>B.E. EEE</h4>
+            <span>Engineering Core</span>
+          </div>
+          <div class="stat-box">
+            <h4>Full-Stack</h4>
+            <span>Frontend & Backend</span>
+          </div>
+          <div class="stat-box">
+            <h4>AI & Automation</h4>
+            <span>PyTorch & Telegram Bots</span>
+          </div>
+        </div>
+
+        <div class="modal-actions" style="margin-top: 24px;">
+          <a href="assets/Keerthivasan_Resume.pdf" download="Keerthivasan_Resume.pdf" class="btn-submit" style="text-decoration:none; text-align:center;">DOWNLOAD CV (PDF)</a>
+          <a href="mailto:keerthivasan6383007833@gmail.com" class="btn-copy-email" style="text-decoration:none; text-align:center;">EMAIL DIRECTLY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PROJECT DETAILS -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-window modal-wide">
+      <div class="modal-header">
+        <h3 id="modalProjectTitle">PROJECT DETAILS</h3>
+        <button class="modal-close" onclick="closeModal('projectModal')">&times;</button>
+      </div>
+      <div class="modal-body-scroll" id="modalProjectBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
